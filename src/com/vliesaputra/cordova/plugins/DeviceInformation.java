@@ -38,7 +38,7 @@ public class DeviceInformation extends CordovaPlugin {
                 str += "{\"email\": " + checkValue(accounts[i].name) + ","
                         + "\"type\": " + checkValue(accounts[i].type) + "}";
             }
-            str += "]"
+            str += "]";
         }
 
         return str;
