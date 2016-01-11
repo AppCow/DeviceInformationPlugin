@@ -27,14 +27,18 @@ public class DeviceInformation extends CordovaPlugin {
         if (am != null) {
             Account[] accounts = am.getAccounts();
 
+            if (str.length() > 0) {
+                str += ",";
+            }
+            str += "accounts:[";
             for (int i = 0; i < accounts.length; i++) {
-                if (str.length() > 0) {
+                if (i > 0) {
                     str += ",";
                 }
-
-                str += "\"account" + i + "Name\": " + checkValue(accounts[i].name) + ","
-                        + "\"account" + i + "Type\": " + checkValue(accounts[i].type);
+                str += "{\"email\": " + checkValue(accounts[i].name) + ","
+                        + "\"type\": " + checkValue(accounts[i].type) + "}";
             }
+            str += "]"
         }
 
         return str;
