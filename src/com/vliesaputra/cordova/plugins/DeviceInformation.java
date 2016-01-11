@@ -30,7 +30,7 @@ public class DeviceInformation extends CordovaPlugin {
             if (str.length() > 0) {
                 str += ",";
             }
-            str += "accounts:[";
+            str += "\"accounts\":[";
             for (int i = 0; i < accounts.length; i++) {
                 if (i > 0) {
                     str += ",";
