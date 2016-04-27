@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.vliesaputra.deviceinformation"
+        id="com.upchannel.deviceinformation"
         version="1.0.1">
 
     <name>DeviceInformation</name>
@@ -21,11 +21,11 @@
 
     <platform name="android">
 
-        <source-file src="src/com/vliesaputra/cordova/plugins/DeviceInformation.java" target-dir="src/com/vliesaputra/cordova/plugins" />
+        <source-file src="src/com/upchannel/cordova/plugins/DeviceInformation.java" target-dir="src/com/upchannel/cordova/plugins" />
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DeviceInformation">
-                <param name="android-package" value="com.vliesaputra.cordova.plugins.DeviceInformation" />
+                <param name="android-package" value="com.upchannel.cordova.plugins.DeviceInformation" />
             </feature>
         </config-file>
 

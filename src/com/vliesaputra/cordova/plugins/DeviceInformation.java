@@ -1,4 +1,4 @@
-package com.vliesaputra.cordova.plugins;
+package com.upchannel.cordova.plugins;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

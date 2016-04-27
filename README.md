@@ -16,7 +16,7 @@ This plugin allows you to retrieve most information about your Android devices t
 Using this plugin requires [Android PhoneGap](https://github.com/apache/incubator-cordova-android).
 
 If you have installed PhoneGap CLI, run the following code from the command line:
-   <pre>phonegap local plugin add https://github.com/vliesaputra/DeviceInformationPlugin</pre>
+   <pre>phonegap local plugin add https://github.com/upchannel/DeviceInformationPlugin</pre>
 
 Otherwise,
 
@@ -26,11 +26,11 @@ Otherwise,
     &lt;script type="text/javascript" charset="utf-8" src="deviceinformation.js"&gt;&lt;/script&gt;
    </pre>
 
-2. Create a directory within your project called "src/com/vliesaputra/cordova/plugins" and copy src/com/vliesaputra/cordova/plugins/DeviceInformation.java into it.
+2. Create a directory within your project called "src/com/upchannel/cordova/plugins" and copy src/com/upchannel/cordova/plugins/DeviceInformation.java into it.
 
 3. In your res/xml/config.xml file add the following line:
    <pre>
-    &lt;plugin name="DeviceInformation" value="com.vliesaputra.cordova.plugins.DeviceInformation"/&gt;
+    &lt;plugin name="DeviceInformation" value="com.upchannel.cordova.plugins.DeviceInformation"/&gt;
    </pre>
 
 
