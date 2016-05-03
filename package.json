@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-deviceinformation",
+  "version": "2.0.0",
+  "description": "Grabs information about a device for Android",
+  "main": "www/deviceinformation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UpChannel/DeviceInformationPlugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "deviceinfo",
+    "deviceinformation",
+    "android",
+    "upchannel"
+  ],
+  "author": "Charlie Hulcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UpChannel/DeviceInformationPlugin/issues"
+  },
+  "homepage": "https://github.com/UpChannel/DeviceInformationPlugin#readme"
+}

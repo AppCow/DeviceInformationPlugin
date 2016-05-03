@@ -1,6 +1,6 @@
-# DeviceInformation plugin for Phonegap #
+# DeviceInformation plugin for Cordova & React Native #
 
-This plugin allows you to retrieve most information about your Android devices that are available through Android's Telephony Manager and Account Manager classes from your PhoneGap application:
+This plugin allows you to retrieve most information about your Android devices that are available through Android's Telephony Manager and Account Manager classes from your Cordova application:
 
 1. Your unique Device ID
 2. Phone Number (if it is stored in your SIM card)
@@ -13,16 +13,22 @@ This plugin allows you to retrieve most information about your Android devices t
 
 ## Adding the Plugin to your project ##
 
-Using this plugin requires [Android PhoneGap](https://github.com/apache/incubator-cordova-android).
+You can use this plugin with Cordova projects on the Android platform only. iOS and other platforms are not implemented.
 
-If you have installed PhoneGap CLI, run the following code from the command line:
-   <pre>phonegap local plugin add https://github.com/upchannel/DeviceInformationPlugin</pre>
+You can also use this plugin with React Native Android by using the amazing [React Native Cordova Plugin](https://github.com/axemclion/react-native-cordova-plugin).
+
+### Install for React Native ###
+`./node_modules/.bin/cordova-plugin add cordova-plugin-deviceinformation`
+
+### Install for Cordova ###
+If you have installed Cordova CLI, run the following code from the command line:
+   <pre>cordova plugin add cordova-plugin-deviceinformation</pre>
 
 Otherwise,
 
-1. To install the plugin, copy the www/deviceinformation.js file to your project's www folder and include a reference to it in your html file after phonegap.js.
+1. To install the plugin, copy the www/deviceinformation.js file to your project's www folder and include a reference to it in your html file after cordova.js.
    <pre>
-    &lt;script type="text/javascript" charset="utf-8" src="phonegap.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
     &lt;script type="text/javascript" charset="utf-8" src="deviceinformation.js"&gt;&lt;/script&gt;
    </pre>
 
@@ -47,28 +53,24 @@ Create a new object that represents the plugin using cordova.require. Then you c
 
 Sample use:
 
-    var deviceInfo = cordova.require("cordova/plugin/DeviceInformation");
+    const deviceInfo = cordova.require("cordova-plugin-deviceinformation.DeviceInformation");
     deviceInfo.get(function(result) {
             console.log("result = " + result);
+            const resultJson = JSON.parse(result);
         }, function() {
             console.log("error");
         });
-    
+
 
 ## RELEASE NOTES ##
-
-### December 29, 2013 ###
-
-* Initial release
-
 
 ## BUGS AND CONTRIBUTIONS ##
 
 
 ## LICENSE ##
 
-This plugin is available under the MIT License (2008). 
-The text of the MIT license is reproduced below. 
+This plugin is available under the MIT License (2008).
+The text of the MIT license is reproduced below.
 
 ---
 
@@ -93,4 +95,3 @@ Copyright (c) 2013 Veronica Liesaputra
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
- 
