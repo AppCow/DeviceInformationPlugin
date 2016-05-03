@@ -1,6 +1,6 @@
 # DeviceInformation plugin for Cordova & React Native #
 
-This plugin allows you to retrieve most information about your Android devices that are available through Android's Telephony Manager and Account Manager classes from your Cordova application:
+This plugin allows you to retrieve most information about your Android devices that are available through Android's Telephony Manager and Account Manager classes from your Cordova or React Native application:
 
 1. Your unique Device ID
 2. Phone Number (if it is stored in your SIM card)
@@ -10,6 +10,7 @@ This plugin allows you to retrieve most information about your Android devices t
 6. Country ISO of your SIM card
 7. Name of your SIM card mobile operator
 8. E-mail/Phone number used by apps listed in your Settings > Accounts & Sync list
+9. And more
 
 ## Adding the Plugin to your project ##
 
