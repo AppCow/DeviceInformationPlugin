@@ -56,11 +56,11 @@ public class DeviceInformation extends CordovaPlugin {
                     + "\"simNo\": " + checkValue(tm.getSimSerialNumber()) + ","
                     + "\"simCountry\": " + checkValue(tm.getSimCountryIso()) + ","
                     + "\"simName\": " + checkValue(tm.getSimOperatorName()) + ","
-                    + "\"userAgent: " + checkValue(System.getProperty("http.agent")) + ","
-                    + "\"systemBoardID: " + checkValue(Build.BOARD) + ","
-                    + "\"systemManufacturer: " + checkValue(Build.MANUFACTURER) + ","
-                    + "\"systemVersion: " + checkValue(Build.VERSION.RELEASE) + ","
-                    + "\"systemName: Android";
+                    + "\"userAgent\": " + checkValue(System.getProperty("http.agent")) + ","
+                    + "\"systemBoardID\": " + checkValue(Build.BOARD) + ","
+                    + "\"systemManufacturer\": " + checkValue(Build.MANUFACTURER) + ","
+                    + "\"systemVersion\": " + checkValue(Build.VERSION.RELEASE) + ","
+                    + "\"systemName\": " + checkValue("Android");
         }
 
         return str;
