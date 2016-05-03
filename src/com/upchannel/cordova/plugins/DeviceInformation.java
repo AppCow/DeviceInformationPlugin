@@ -10,6 +10,7 @@ import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.os.Build;
 
 public class DeviceInformation extends CordovaPlugin {
 
@@ -55,7 +56,11 @@ public class DeviceInformation extends CordovaPlugin {
                     + "\"simNo\": " + checkValue(tm.getSimSerialNumber()) + ","
                     + "\"simCountry\": " + checkValue(tm.getSimCountryIso()) + ","
                     + "\"simName\": " + checkValue(tm.getSimOperatorName()) + ","
-                    + "\"userAgent: " + checkValue(System.getProperty("http.agent"));
+                    + "\"userAgent: " + checkValue(System.getProperty("http.agent")) + ","
+                    + "\"systemBoardID: " + checkValue(BUILD.BOARD) + ","
+                    + "\"systemManufacturer: " + checkValue(BUILD.MANUFACTURER) + ","
+                    + "\"systemVersion: " + checkValue(BUILD.VERSION.RELEASE) + ","
+                    + "\"systemName: Android";
         }
 
         return str;
