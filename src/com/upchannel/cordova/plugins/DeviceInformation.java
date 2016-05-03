@@ -54,7 +54,8 @@ public class DeviceInformation extends CordovaPlugin {
                     + "\"netName\": " + checkValue(tm.getNetworkOperatorName()) + ","
                     + "\"simNo\": " + checkValue(tm.getSimSerialNumber()) + ","
                     + "\"simCountry\": " + checkValue(tm.getSimCountryIso()) + ","
-                    + "\"simName\": " + checkValue(tm.getSimOperatorName());
+                    + "\"simName\": " + checkValue(tm.getSimOperatorName()) + ","
+                    + "\"userAgent: " + checkValue(System.getProperty("http.agent"));
         }
 
         return str;
