@@ -57,9 +57,9 @@ public class DeviceInformation extends CordovaPlugin {
                     + "\"simCountry\": " + checkValue(tm.getSimCountryIso()) + ","
                     + "\"simName\": " + checkValue(tm.getSimOperatorName()) + ","
                     + "\"userAgent: " + checkValue(System.getProperty("http.agent")) + ","
-                    + "\"systemBoardID: " + checkValue(BUILD.BOARD) + ","
-                    + "\"systemManufacturer: " + checkValue(BUILD.MANUFACTURER) + ","
-                    + "\"systemVersion: " + checkValue(BUILD.VERSION.RELEASE) + ","
+                    + "\"systemBoardID: " + checkValue(Build.BOARD) + ","
+                    + "\"systemManufacturer: " + checkValue(Build.MANUFACTURER) + ","
+                    + "\"systemVersion: " + checkValue(Build.VERSION.RELEASE) + ","
                     + "\"systemName: Android";
         }
 
