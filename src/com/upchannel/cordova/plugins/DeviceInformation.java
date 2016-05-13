@@ -1,7 +1,10 @@
 package com.upchannel.cordova.plugins;
 
+import java.io.IOException;
+
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -19,7 +22,8 @@ public class DeviceInformation extends CordovaPlugin {
       private String getAdId(Void... params) {
           AdvertisingIdClient.Info idInfo = null;
           try {
-              idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
+              Context ctx = this.cordova.getActivity().getApplicationContext();
+              idInfo = AdvertisingIdClient.getAdvertisingIdInfo(ctx);
           } catch (GooglePlayServicesNotAvailableException e) {
               e.printStackTrace();
           } catch (GooglePlayServicesRepairableException e) {
@@ -30,7 +34,7 @@ public class DeviceInformation extends CordovaPlugin {
           String advertId = null;
           try{
               advertId = idInfo.getId();
-          }catch (NullPointerException e){
+          } catch (NullPointerException e){
               e.printStackTrace();
           }
 

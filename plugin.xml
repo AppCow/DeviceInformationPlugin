@@ -3,11 +3,11 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-deviceinformation"
-        version="2.0.1">
+        version="2.0.2">
 
     <name>DeviceInformation</name>
     <description>This plugin will get most of the information available through Android's Telephony Manager and Account Manager classes.</description>
-    <author>Veronica Liesaputra</author>
+    <author>Charlie Hulcher, Veronica Liesaputra</author>
     <keywords>android, telephony manager, phone number, device information, account details</keywords>
     <license>MIT</license>
 
