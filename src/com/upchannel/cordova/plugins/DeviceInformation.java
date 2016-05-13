@@ -1,5 +1,8 @@
 package com.upchannel.cordova.plugins;
 
+import com.google.android.gms.ads.identifier.AdvertisingIdClient;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
@@ -13,6 +16,27 @@ import android.accounts.AccountManager;
 import android.os.Build;
 
 public class DeviceInformation extends CordovaPlugin {
+      private String getAdId(Void... params) {
+          AdvertisingIdClient.Info idInfo = null;
+          try {
+              idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
+          } catch (GooglePlayServicesNotAvailableException e) {
+              e.printStackTrace();
+          } catch (GooglePlayServicesRepairableException e) {
+              e.printStackTrace();
+          } catch (IOException e) {
+              e.printStackTrace();
+          }
+          String advertId = null;
+          try{
+              advertId = idInfo.getId();
+          }catch (NullPointerException e){
+              e.printStackTrace();
+          }
+
+          return advertId;
+      }
+
 
     private String checkValue(String str) {
         if ((str == null) || (str.length() == 0)) {
@@ -60,7 +84,8 @@ public class DeviceInformation extends CordovaPlugin {
                     + "\"systemBoardID\": " + checkValue(Build.BOARD) + ","
                     + "\"systemManufacturer\": " + checkValue(Build.MANUFACTURER) + ","
                     + "\"systemVersion\": " + checkValue(Build.VERSION.RELEASE) + ","
-                    + "\"systemName\": " + checkValue("Android");
+                    + "\"systemName\": " + checkValue("Android") + ","
+                    + "\"adId\": " + checkValue(getAdId());
         }
 
         return str;
