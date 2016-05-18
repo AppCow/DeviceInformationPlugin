@@ -3,14 +3,19 @@
 This plugin allows you to retrieve most information about your Android devices that are available through Android's Telephony Manager and Account Manager classes from your Cordova or React Native application:
 
 1. Your unique Device ID
-2. Phone Number (if it is stored in your SIM card)
-3. Country ISO of your phone network provider
-4. Name of your network provider
-5. Your SIM Card Serial number
-6. Country ISO of your SIM card
-7. Name of your SIM card mobile operator
-8. E-mail/Phone number used by apps listed in your Settings > Accounts & Sync list
-9. And more
+- Phone Number (if it is stored in your SIM card)
+- Country ISO of your phone network provider
+- Name of your network provider
+- Your SIM Card Serial number
+- Country ISO of your SIM card
+- Name of your SIM card mobile operator
+- E-mail/Phone number used by apps listed in your Settings > Accounts & Sync list
+- Device model
+- Board ID
+- Manufacturer Name
+- User Agent String
+- Android Version Number
+- Google Ad ID
 
 ## Adding the Plugin to your project ##
 
